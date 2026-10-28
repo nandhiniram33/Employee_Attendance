@@ -1,0 +1,25 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+jwt:
+  secret: "testSecretKeyForJwtAuthenticationTesting2026TestKey123"
+  expiration: 3600000
+
+app:
+  ai-service-url: "http://localhost:5001"
+  cors:
+    allowed-origins: "http://localhost:5173"

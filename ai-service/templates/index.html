@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Face Attendance</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Face Attendance</h1>
+        <p>AI-powered employee recognition</p>
+        <button id="startCamBtn" class="primary-btn">Start Camera</button>
+      </aside>
+
+      <main class="main-panel">
+        <section class="card">
+          <div class="section-header">
+            <h2>Employee Registration</h2>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              Employee ID
+              <input id="employeeId" type="text" placeholder="EMP-1001" />
+            </label>
+            <label>
+              Full Name
+              <input id="employeeName" type="text" placeholder="Jane Doe" />
+            </label>
+          </div>
+
+          <div class="camera-box">
+            <video id="registrationVideo" autoplay playsinline muted></video>
+          </div>
+
+          <div class="actions-row">
+            <button id="captureBtn" class="secondary-btn">Capture Sample</button>
+            <button id="registerBtn" class="primary-btn">Register Employee</button>
+          </div>
+
+          <div id="captureStatus" class="status-box info">No samples captured yet.</div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Live Recognition</h2>
+          </div>
+
+          <div class="camera-box">
+            <video id="recognitionVideo" autoplay playsinline muted></video>
+          </div>
+
+          <div class="actions-row">
+            <button id="recognizeBtn" class="primary-btn">Recognize Face</button>
+          </div>
+
+          <div id="recognitionResult" class="result-panel">
+            <span class="result-label">Status:</span>
+            <strong id="resultText">Waiting for recognition</strong>
+            <div id="resultMeta" class="result-meta">Confidence: 0%</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

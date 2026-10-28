@@ -1,0 +1,35 @@
+# Java
+backend/target/
+backend/.idea/
+backend/.classpath
+backend/.project
+backend/.settings/
+*.log
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python
+.venv/
+ai-service/__pycache__/
+ai-service/.venv/
+ai-service/data/temp/
+*.pyc
+__pycache__/
+
+# Tools & Local
+.tools/
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
